@@ -1,0 +1,10 @@
+static int StringToInt(String S){
+//Enter your code here
+return Integer.valueOf(S);
+}
+
+static String checkConevrtion(int a)
+ {
+       // your code here
+       return String.valueOf(a);
+          }
