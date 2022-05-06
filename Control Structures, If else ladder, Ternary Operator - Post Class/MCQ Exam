@@ -1,0 +1,37 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+		int P = sc.nextInt();  
+		int Q = sc.nextInt(); 
+		int R = sc.nextInt(); 
+		int S = sc.nextInt();
+		if((P>=0 && P<=100) && (Q>=0 && Q<=100) && (R>=0 && R<=100) && (S>=0 && S<=100) && (P+Q+R+S==100))
+		{
+			if((P>=Q)&&(P>=R) && (P>=S))
+			{
+				System.out.println(100-(Q+R+S));
+			}
+			else if((Q>=P)&&(Q>=R) && (Q>=S))
+			{
+				System.out.println(100-(P+R+S));
+			}
+			else if((R>=P)&&(R>=Q) && (R>=S))
+			{
+				System.out.println(100-(P+Q+S));
+			}
+			else if((S>=P)&&(S>=Q) && (S>=R))
+			{
+				System.out.println(100-(P+Q+R));
+			}
+			else if((P==Q)&&(Q==R) && (R==S) && (S==P))
+			{
+				System.out.println(P);
+			}
+		}            // Your code here
+	}
+}
