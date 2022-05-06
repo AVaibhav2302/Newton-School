@@ -1,0 +1,35 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+        Scanner sc= new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+		int d = sc.nextInt();
+		int e = sc.nextInt();
+
+		int t = a+b+c+d+e;
+		int p = t/5;
+		
+		if(p >= 80)
+		{
+			System.out.print("A");
+		}  
+		else if(p >= 60) 
+		{
+			System.out.print("B");
+		}
+		else if(p >= 40 )
+		{
+			System.out.print("C");
+		} 
+		else
+		{
+			System.out.print("D");
+		} 		      // Your code here
+	}
+}
