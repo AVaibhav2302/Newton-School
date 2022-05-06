@@ -1,0 +1,25 @@
+static int DivisorProblem(int N){
+//Enter your code here
+int count = 0;
+while (N!=1){
+    if(N % 2 == 0) {
+       N = N/2;
+       count++;
+    }else if(N % 3 == 0){
+        N = N/3;
+        count++;
+    }
+    else if(N % 5 == 0){
+        N = N/5;
+        count++; 
+    }else if(N % 7 == 0){
+        N = N/7;
+        count++; 
+}
+else{
+    N =1;
+    count++;
+}
+}
+return count;
+}
