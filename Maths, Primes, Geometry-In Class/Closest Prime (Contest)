@@ -1,0 +1,54 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+                      // Your code here
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(n==1){System.out.println(2);}
+        else if(isPrime(n)){System.out.println(n);}
+        else {
+            int p1=2;
+            for (int i = n-1; i > 2; i--) {
+            if(isPrime(i)){
+                p1 = i;
+                break;
+                }
+            }
+            int p2 = n+1;
+            for (int i = n+1; true; i++) {
+                if(isPrime(i)){
+                    p2 = i;
+                    break;
+                }
+            }
+            int diff1 = Math.abs(n-p1);
+            int diff2 = Math.abs(n-p2);
+            if (diff1==diff2){
+                System.out.println(p1);
+            }
+            else if(diff1>diff2){
+                System.out.println(p2);
+            }else{
+                System.out.println(p1);
+            }
+        }
+	}
+    static boolean isPrime(int n) {
+        if (n <= 1)
+            return false;
+        else if (n == 2)
+            return true;
+        else if (n % 2 == 0)
+            return false;
+        for (int i = 3; i <= Math.sqrt(n); i += 2)
+        {
+            if (n % i == 0)
+                return false;
+        }
+        return true;
+    }
+}
