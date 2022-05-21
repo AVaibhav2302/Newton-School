@@ -1,0 +1,4 @@
+def SuperPrimes(N):
+  a=N//2
+  for i in range(a+1, N+1):
+    yield i
